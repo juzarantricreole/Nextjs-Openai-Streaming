@@ -11,7 +11,7 @@ export default async function handler(request, response) {
 
     // Fetch the response from the OpenAI API
     const openai = new OpenAI({
-        apiKey: "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",
+        apiKey: process.env.NEXT_PUBLIC_OPENAI_KEY,
     });
 
     const responseFromOpenAI = await openai.chat.completions.create({
